@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Die.css';
 
+
 class Die extends Component {
    
     render(){

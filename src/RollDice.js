@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Die from './Die';    // once I use "Die," it needs to be imported
+import './RollDice.css';
 
 
 class RollDice extends Component {
@@ -16,10 +17,10 @@ class RollDice extends Component {
         // Need to pick to new rolls
         // Math.floor(Math.random() * this.props.sides.length);
             // take the number above to acces the data from the sides and assign it to each die
-        const newDice1 = this.props.sides[
+        let newDice1 = this.props.sides[
             Math.floor(Math.random() * this.props.sides.length)
         ];
-        const newDice2 = this.props.sides[
+        let newDice2 = this.props.sides[
             Math.floor(Math.random() * this.props.sides.length)
         ];
         // set State with the new variables
@@ -28,11 +29,12 @@ class RollDice extends Component {
 
     render(){
         return(
-            <div>
+            <div className = "RollDice">
+              <div className = "RollDice-container">
               <Die face = {this.state.die1}/>  
               <Die face = {this.state.die2}/>
-              <button onClick={this.roll}>Click to roll</button>
-              
+            </div>
+            <button onClick={this.roll}>Click to roll dice</button>
             </div>
         );
     }
