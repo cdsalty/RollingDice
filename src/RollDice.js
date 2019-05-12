@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Die from './Die';    // once I use "Die," it needs to be imported
 
+
 class RollDice extends Component {
     static defaultProps = {
         sides: ["one", "two", "three", "four", "five", "six"]
