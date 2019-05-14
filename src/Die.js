@@ -6,7 +6,7 @@ class Die extends Component {
    
     render(){
         // return <i className='fas fa-dice-one'></i>      // See note 1
-      return <i className = {`DieStyle fas fa-dice-${this.props.face}`} />; // created face on App and then rendered as a prop here.
+      return <i className = {`DieStyle fas fa-dice-${this.props.face} ${this.props.rolling? 'shaking' : ''}`} />; // created face on App and then rendered as a prop here.
     }
 }
 

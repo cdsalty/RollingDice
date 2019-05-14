@@ -5,7 +5,48 @@
 .DieStyle {
     font-size: 10em;    
     padding: 0.35em;
-    /* color: rgb(39, 1, 179);*/
-    color: slateblue;
+    color: rgb(191, 69, 69);
 }
 
+.shaking {
+    animation-name: wibble;
+    animation-duration: 1s; 
+}
+/* 
+wibble-wabble is created but not assigned or in action; 
+To put into action, need to add it and define it. In this example, used shaking.
+    create a class called rolling and then selectively apply the class to the die depending on what prop is passed down.  
+And then give it a duration
+And make sure they shake when the dice is being rolled. 
+CREATE A CLASS THAT WILL MAKE THEM WIBBLE-WABBLE and then apply that class if rolling or not. 
+    - animation-name: wibble-wabble;
+*/
+@keyframes wibble {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    15% {
+        transform: translate3d(-25%,0,0) rotate(0,0,1, -5deg);
+    }
+
+    30% {
+        transform: translate3d(20%,0,0) rotate(0,0,1, 3deg);
+    }
+
+    45% {
+        transform: translate3d(-15%,0,0) rotate(0,0,1, -3deg);
+    }
+
+    60% {
+        transform: translate3d(10%,0,0) rotate(0,0,1, 2deg);
+    }
+
+    75% {
+        transform: translate3d(-5%,0,0) rotate(0,0,1, -1deg);
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+    }
+}

@@ -1,3 +1,5 @@
+
+
 .RollDice{
     display: flex;
     flex-flow: column nowrap;
@@ -10,15 +12,17 @@
 }
 
 .RollDice button{
-    align-self: center;    /*first time using align-self*/
-    width: 15em;
-    padding: 2em;
+    align-self: center;    /*first time I usedx align-self*/
+    width: 8em;
+    padding: 8px;
+    font-size: 2rem;
+    font-display: bold;
     border: none;
     border-radius: 10px;
     color: seashell;
     background-color: sandybrown;
     margin-top: 5em;
-    
+    background: rgba(24, 24, 172, 0.721);
 }
 
 .RollDice button:hover{
